@@ -1,4 +1,4 @@
-package OOP.hw2;
+package OOP.FileOperationsimpl;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ interface FileOperations {
 }
 
 // Реализация интерфейса для операций с файлами
-class FileOperationsImpl implements FileOperations {
+public class FileOperationsImpl implements FileOperations {
     @Override
     public void saveToFile(FamilyTree familyTree, String fileName)
             throws IOException {
@@ -110,7 +110,7 @@ class FamilyTree implements Serializable {
 }
 
 // Главный класс с точкой входа
-public class hw2 {
+public class FileOperationsimpl {
     public static void main(String[] args) {
         FamilyTree familyTree = new FamilyTree();
         // Создаем людей
