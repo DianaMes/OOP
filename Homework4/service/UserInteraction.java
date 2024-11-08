@@ -6,11 +6,11 @@ import OOP.Homework4.model.Person;
 import java.util.Scanner;
 
 public class UserInteraction {
-    private FamilyTree familyTree;
+    private FamilyTree<Person> familyTree; // Указываем тип Person
     private Scanner scanner;
 
     public UserInteraction() {
-        familyTree = new FamilyTree();
+        familyTree = new FamilyTree<>(); // Создаем объект FamilyTree с типом Person
         scanner = new Scanner(System.in);
     }
 
@@ -55,9 +55,9 @@ public class UserInteraction {
     }
 
     private void showFamilyTree() {
-        for (Person person : familyTree) {
+        // Приводим T к Person, используя getPeople(), который возвращает List<Person>
+        for (Person person : familyTree.getPeople()) {
             System.out.println(person.getName() + ", born in " + person.getBirthYear());
         }
     }
-
 }

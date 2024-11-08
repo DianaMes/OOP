@@ -8,11 +8,12 @@ import OOP.Homework5.view.ConsoleTreeView;
 
 public class Main {
     public static void main(String[] args) {
+        // Параметризация с типом Person
         FamilyTree<Person> familyTree = new FamilyTree<>();
         ConsoleTreeView view = new ConsoleTreeView();
+        // Параметризация с типом Person
         FileOperationsImpl<Person> fileOperations = new FileOperationsImpl<>();
-        TreePresenter presenter = new TreePresenter(familyTree,
-                view, fileOperations);
+        TreePresenter presenter = new TreePresenter(familyTree, view, fileOperations);
         presenter.handleUserInput();
     }
 }

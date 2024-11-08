@@ -21,8 +21,7 @@ public class ConsoleTreeView implements TreeView {
     @Override
     public void displayPersons(List<Person> persons) {
         for (Person person : persons) {
-            System.out.println(person.getName() + ", born in " +
-                    person.getBirthYear());
+            System.out.println(person.getName() + ", born in " + person.getBirthYear());
         }
     }
 
